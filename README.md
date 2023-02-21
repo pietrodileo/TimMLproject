@@ -17,25 +17,36 @@ Please follow these commands in powershell:
 
 if you want to use a virtual environment, in the current folder do:
 1. Create the V.E.
+
 python -m venv vEnv
+
 2. Activate the V.E.
+
 .\venv\Scripts\Activate.ps1
+
 If it is impossible to activate the environment try writing before:
+
 Set-ExecutionPolicy Unrestricted -Scope Process
 (type deactivate to deactivate the environment)
 
 Execute code:
 3. Install required libraries
+
 pip install -r .\requirements.txt
+
 4. To run the code just do:
+
 python .\main.py  
 
 After this, Streamlit app is automatically launched. If you don't want to launch the app please comment line 34 ("webapp(mdl)") in "main.py".
 
 5. CTRL + C to close the app.
+
 Please close the app before closing the browser.
 
 6. After one run the model and the data were saved in f_app folder, so you can directly run the web app without running main.py another time.
 To do this write:
+
 streamlit run .\\f_app\\app.py --server.port 9800
-Port 9800 was choosen in order to avoid errors.
+
+Port 9800 was choosen in order to avoid errors and it is used also in main.py run.
